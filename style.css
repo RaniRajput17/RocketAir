@@ -1,0 +1,1012 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Aeonik pro;
+    overscroll-behavior: none;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+/* .textwrapper span{
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.textwrapper span:nth-child(1){
+    margin-left: 0;
+}
+
+.textwrapper {
+    width: fit-content;
+    overflow: hidden;
+} */
+
+#main {
+    /* width: 100%; */
+    position: relative;
+}
+
+#hero {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 70vh;
+    background-color: black;
+}
+
+.row {
+    display: flex;
+    font-size: 3vw;
+    color: #fff;
+    width: 100%;
+    font-weight: 200;
+    padding: 0 3vw;
+}
+
+#line {
+    display: inline-block;
+    height: 2px;
+    width: 45%;
+    margin: 52px 25px;
+    background-color: rgb(145, 145, 145);
+}
+
+.row:nth-child(3) {
+    justify-content: flex-end;
+}
+
+#content {
+    position: absolute;
+    margin-top: 70vh;
+    width: 100%;
+    /* min-height: 100vh; */
+    /* background-color: grey; */
+}
+#content::-webkit-scrollbar{
+    display: none;
+}
+
+#last {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9vw;
+    font-weight: 100;
+}
+
+#last>p {
+    position: absolute;
+    right: 6%;
+    margin-top: 27px;
+}
+
+#down {
+    position: absolute;
+    right: 4%;
+    margin-top: 27px;
+    font-size: 1.2vw;
+}
+
+#vdo {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#desc {
+    display: flex;
+    align-items: center;
+    padding: 4vw;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+#desc>h1 {
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+#orbital {
+    width: 100%;
+    height: 100vh;
+    padding: 4vw;
+    background-color: black;
+}
+
+#orbital h2 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 3vw;
+}
+
+#orbital h2 #line1 {
+    display: inline-block;
+    width: 85%;
+    height: 0.2px;
+    background-color: rgb(102, 101, 101);
+}
+
+.rowtxt {
+    display: flex;
+    align-items: center;
+}
+
+.rowtxt h1 {
+    font-size: 22vw;
+    font-weight: 400;
+    line-height: 19vw;
+    text-transform: uppercase;
+}
+
+.rowtxt #span {
+    position: relative;
+    width: 40vw;
+    height: 9vh;
+    border: 1px solid #fff;
+    overflow: hidden;
+    padding: 1.1vw 2vw;
+    border-radius: 100px;
+}
+
+.rowtxt #span span {
+    position: absolute;
+    z-index: 9999999;
+    color: #fff;
+    font-size: 1.4vw;
+}
+
+.rowtxt #span:hover .openingg {
+    height: 100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+}
+
+.rowtxt #span:hover span {
+    color: #000;
+}
+
+#orbitalvdo {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#orbitalvdo video {
+    position: absolute;
+    width: 60vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#slides {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 25%;
+    height: 100vh;
+    background-color: black;
+    border-right: 0.3px solid #444;
+    border-top: 0.3px solid #444;
+
+}
+
+.tile {
+    display: flex;
+    z-index: 999999;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 0 2vw;
+}
+
+.tile>h3 {
+    font-size: 4vw;
+    color: white;
+    font-weight: 400;
+}
+
+.icon {
+    position: relative;
+    overflow: hidden;
+    width: 3vw;
+    color: white;
+   height:3vw;
+    border-radius: 50%;
+    border: 1px solid #444;
+}
+
+.icon #mainteer {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon #rightteer {
+    position: absolute;
+    top: 150%;
+    color: whitesmoke;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.icon i {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.slide:hover {
+    cursor: pointer;
+}
+
+.slide:hover .icon #mainteer {
+    left: 150%;
+}
+
+.slide:hover .icon #rightteer {
+    top: 50%;
+    left: 50%;
+}
+
+.opening {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: #fff;
+    top: 50%;
+    color: black;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .6s;
+}
+
+.slide:hover .opening {
+    width: 100%;
+}
+
+.slide:hover .tile>h3 {
+    color: black;
+}
+
+.slide:hover .icon {
+    background-color: black;
+}
+
+.slide .info {
+    position: absolute;
+    font-size: 1.2vw;
+    z-index: 999999;
+    opacity: 0;
+    color: #fff;
+    bottom: -5%;
+    padding: 0 2vw;
+    font-weight: 400;
+}
+
+.slide:hover .info {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    bottom: 5%;
+    color: black;
+    opacity: 1;
+}
+
+#circular {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#circular img {
+    animation: ghumteraho 10s infinite linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes ghumteraho {
+    from {
+        transform: translate(-50%, -50%)rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%)rotate(359deg);
+    }
+}
+
+#circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .7s;
+    background-color: #fff;
+}
+
+#circular:hover #circle {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.shutterleft {
+    pointer-events: none;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    background-color: #000;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    opacity: 1;
+    z-index: 99999;
+}
+
+.shutterright {
+    pointer-events: none;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background-color: #000;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    z-index: 99999999;
+}
+
+#vid1 {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+#vid1 video {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+
+#vid2 {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+#vid3 {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+}
+
+#partner {
+    display: flex;
+    align-items: center;
+    padding: 4vw;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    line-height: 6vw;
+}
+
+#partner>h1 {
+    color: black;
+    font-size: 5vw;
+    font-weight: 500;
+}
+
+#mainpart {
+    width: 100%;
+    /* height: 100vh; */
+    padding-top: 4vw;
+    background-color: #fff;
+}
+
+#multipart {
+    position: relative;
+    padding-left: 4vw;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  height:60vh;
+}
+
+#multipart::-webkit-scrollbar {
+    display: none;
+}
+
+
+.part {
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    position: absolute;
+    padding-top: 30px;
+    width: 50%;
+    height: 60vh;
+    padding: 3vw 7vw;
+    background-color: #fff;
+}
+
+#part2 {
+    left: 35%;
+}
+
+#part3 {
+    left: 65%;
+}
+
+#part4 {
+    left: 95%;
+}
+
+#part5 {
+    left: 130%;
+}
+
+.part img {
+    margin-bottom: 2vw;
+}
+
+.part p {
+    font-size: 1vw;
+    color: #000;
+     margin-top: 4vw; 
+}
+
+#workdiv {
+    /* height:100vh; */
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+}
+#work {
+     display: flex; 
+    justify-content: center; 
+    width: 100%;
+    height: 100vh;
+    padding-top: 5vw;
+    background-color: #fff;
+}
+#work h1{
+    color: #000;
+    font-size: 25vw;
+    text-transform:uppercase;
+}
+.card {
+    width: 25vw;
+    height: 70vh;
+    background-color: aqua;
+}
+
+#card1 {
+    position: absolute;
+    top: 100%;
+    left: 15%;
+}
+#card2 {
+    position: absolute;
+    top: 120%;
+    left: 43%;
+}
+
+ #card3 {
+    position: absolute;
+    top: 110%;
+    left: 70%;
+} 
+#texta{
+    width: 100%;
+    font-size: 2vw;
+    color: #000;
+    position: absolute;
+
+}
+/* #take{
+     position: absolute; 
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    top: 74%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+} */
+/* .row1{
+    padding: 0 3vw;
+    display: flex;
+    color: #000;
+    width: 100%;
+    font-size: 7vw;
+    font-weight: 500;
+}
+#line2{
+    display: inline-block;
+    height: 1px;
+    width: 45%;
+    margin: 57px 30px;
+    background-color: rgb(84,84,84);
+}
+.row1:nth-child(3){
+    justify-content: flex-end;
+} */
+
+ #fuel {
+    position: relative;
+    display: flex;
+    width: 100%;
+    /* height: 115vh; */
+    /* margin-bottom: 50vh; */
+    background-color: #000;
+}
+
+#left {
+    display: flex;
+    border-top: 1.5px solid rgb(84, 84, 84);
+    border-right: 1.5px solid rgb(84, 84, 84);
+    width: 50%;
+    height: 115vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 6vw;
+}
+
+#left h2 {
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+#left p {
+    text-align: center;
+    margin-top: 1.5vw;
+    margin-bottom: 2.5vw;
+}
+
+#left input {
+    width: 80%;
+    height: 5vh;
+    margin-top: 3vw;
+    padding: 2vw 0.5vw;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    font-size: 1.4vw;
+    color: #fff;
+}
+
+#left #button {
+    width: 30%;
+    height: 12vh;
+    margin-top: 4vw;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(185, 182, 182);
+    padding: 1.5vw 1.5vw;
+    border-radius: 100px;
+    background-color: #000;
+}
+
+#left #button span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 99999999;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5vw;
+}
+
+#right {
+    border-top: 1.5px solid rgb(84, 84, 84);
+    width: 50%;
+    height: 115vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1vw;
+}
+
+#right a {
+    height: 11vh;
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    border-bottom: 2px solid #333;
+}
+
+#right h1 {
+    position: absolute;
+    margin-bottom: 1.4vw;
+    padding-left: 3vw;
+    padding-top: 0.6vw;
+    font-size: 2.7vw;
+    z-index: 99999999;
+    font-weight: 400;
+}
+
+#icondiv {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+}
+
+#icondiv .social {
+    position: relative;
+    width: 3vw;
+    height: 3vw;
+    margin-left: 2vw;
+    margin-top: 4vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6vw;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.social i {
+    z-index: 99999999;
+}
+
+#texta {
+    width: 100%;
+    font-size: 2vw;
+    position: absolute;
+    bottom: 0;
+    color: #000;
+    background-color: #fff;
+}
+
+.openingg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+    width: 100%;
+    height: 0vh;
+    background-color: #fff;
+}
+
+a:hover .openingg {
+    height: 100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+}
+
+a:hover h1 {
+    color: black;
+}
+
+#icondiv .social:hover .openingg {
+    height: 100%;
+    cursor: pointer;
+    top: 50%;
+    border-radius: 50%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.social:hover i {
+    color: black;
+}
+
+#left #button:hover .openingg {
+    height: 100%;
+    cursor: pointer;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.9s;
+}
+
+#left #button:hover span {
+    color: #000;
+}
+
+#footer {
+    height: 65vh;
+    width: 100%;
+}  
+#nav{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    position: absolute;
+    z-index: 9999999;
+    width: 100%;
+    height: 10vh;
+}
+#logo{
+    margin: 2vw 3.2vw;
+}
+#yellow{
+    position:absolute;
+    width: 11vw;
+    background-color: rgb(222, 222, 75);
+    overflow: hidden;
+    border-radius: 100px;
+    height: 3vw;
+    right: 15%;
+    padding: 0.8vw 2vw;
+    top: 45%;
+}
+#yellow span{
+    color: #000;
+}
+#menu{
+    position: absolute;
+    top: 50%;
+    right: 7%;
+}
+#menu i{
+    font-size: 2vw;
+}
+@media(max-width: 500px){
+    #content{
+        overflow: hidden;
+        margin-top:65vw;
+    }
+     #logo{
+        margin: 5vw 6.2vw;
+    }
+    #yellow{
+        margin-top: -2vw;
+        width: 30vw;
+        height: 4vh;
+    }
+    #menu{
+        top: 38%;
+    }
+    #menu i{
+        font-size: 5vw;
+    }
+    #hero{
+        padding-top: 0vw;
+        min-height: 40vh;
+    }
+    .row h1 span{
+        font-size: 10vw;
+        margin-top: 6vw;
+
+    }
+    #vdo{
+        /* margin-top: -54vw; */
+        height: 70vh;
+        width: 100vw;
+    }
+    #desc{
+        height: 40vh;
+    }
+    #desc h1{
+        font-size: 5.5vw;
+    }
+    #orbital h2{
+        font-size: 5.8vw;
+        margin-bottom: 10vw;
+    }
+    #orbital h2 #line1{
+        width: 62vw;
+    }
+  
+
+
+   .rowtxt #span {
+        width: 25vw;
+        height:4vh;
+        margin-left:27vw ;
+        margin-top: 12vw;
+    }
+
+    .rowtxt #span span{
+        font-size: 3.5vw;
+    }
+
+    #orbital .rowtxt:nth-child(3){
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #orbital{
+        height: 60vh;
+    }
+    #orbitalvdo{
+        height: 70vh;
+    }
+
+    #orbitalvdo video{
+        height:70vh;
+        width:120vw;
+    }
+
+    .slide .info{
+        font-size: 4.5vw;
+    }
+    #slides{
+        flex-direction: column;
+    }
+    .slide{
+        width: 100vw;
+        height: 25vh;
+    } 
+ .tile h3{
+    margin: 2vw;
+        font-size: 8vw;
+    }
+
+    .icon{
+        height:8vw;
+        width:8vw;
+    }
+    #circularimage{
+           width: 35vw;
+           height: 20vh;
+           object-fit: cover;
+           object-position: center;
+    }
+    #partner{
+        height: 45vh;
+    }
+    #partner h1{
+        line-height: 9vw;
+        font-size: 8vw;
+    }
+    
+
+    .part{
+        width:85vw;
+        padding-left:1vw;
+    }
+
+    .part p{
+        font-size:5.5vw;
+    }
+
+    .part img{
+        margin : 5px;
+    }
+
+    #part2{
+        left:90%;
+    }
+
+    #part5{
+        left:350%;
+    }
+
+    #part4{
+        left:260%;
+    }
+
+    #part3{
+        left:170%;
+    }
+    
+
+    #work{
+        display:flex;
+        align-items:center ;
+        justify-content: center;
+        height:100vh;
+    }
+
+    #work h1{
+        font-size: 30vw;
+    }
+    .card{
+        width: 60vw;
+        height: 70vh;
+        
+    }
+.card #texta{
+    font-size: 7vw;
+}
+
+    #card1{
+        top: 100%;
+        left:0%;
+    }
+    #card2{
+        top: 170%;
+        left:40%;
+    }
+    #card3{
+        top: 250%;
+        left:10%;
+    }
+    #fuel{
+        flex-direction: column;
+    }
+    #left{
+        width: 100%;
+        height: 80vh;
+    }
+
+    #left h2{
+        font-size: 10vw;
+        margin-bottom: 5vw;
+    }
+
+    #left p{
+        font-size: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    #left input{
+        font-size: 8vw;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    #left #button span{
+        font-size: 3.5vw;
+    }
+
+    #right{
+        width: 100%;
+        height: 85vh;
+    }
+
+    #right a h1{
+        font-size: 6vw;
+        margin-top: 4vw;
+    }
+
+    #icondiv{
+        height:10vh;
+
+    }
+
+    #icondiv .social{
+        width:10vw;
+        height:10vw;
+    }
+
+    #icondiv .social i{
+        font-size: 5vw;
+    }
+
+    #footer{
+        height:5vh;
+background-color: #000;
+    }
+
+}
